@@ -1,0 +1,152 @@
+/********************* Global Variables **********************/
+
+:root {
+    --white: hsl(0, 0%, 100%);
+    --green: hsl(75, 94%, 57%);
+    --grey-700: hsl(0, 0%, 20%);
+    --grey-800: hsl(0, 0%, 12%);
+    --grey-900: hsl(0, 0%, 8%);
+}
+
+/********************** Test & Debug *************************/
+
+/* * {
+    outline: 1px solid rgb(178, 165, 253);
+    background-color: hsl(347, 22%, 51%);
+} */
+
+/********************* Standard Resets ***********************/
+
+html {
+    /* Prioritises dark mode but allows light mode */
+    color-scheme: dark light;
+}
+
+*,
+*::before,
+*::after {
+    /* Ensures padding & border remain within element's size */
+    box-sizing: border-box;
+}
+
+* {
+    /* Remove browser's default margin, padding, and font settings */
+    margin: 0;
+    padding: 0;
+    /* Ensures forms, buttons, etc., match the document font */
+    font: inherit;
+}
+
+img,
+picture,
+svg,
+video {
+    /* Prevents inline spacing issues */
+    display: block;
+    /* Ensures media scales within parent container */
+    max-width: 100%;
+}
+
+/*************************************************************/
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+
+    background-color: var(--grey-900);
+    font-family: "Inter", sans-serif;
+    color: var(--white);
+}
+
+.profile-card {
+    background-color: var(--grey-800);
+    text-align: center;
+    font-size: 14px;
+    letter-spacing: 0;
+    line-height: 150%;
+    min-width: 327px;
+    border-radius: 12px;
+    margin: 116.5px 24px;
+    padding: 24px;
+}
+
+.avatar {
+    width: 88px;
+    border-radius: 50%;
+    margin-inline: auto;
+    margin-bottom: 24px;
+}
+
+.profile-card>h1 {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 150%;
+}
+
+.address {
+    color: var(--green);
+    font-weight: 700;
+    margin-bottom: 24px;
+    line-height: 150%;
+}
+
+.bio {
+    line-height: 150%;
+}
+
+.links a {
+    all: unset;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    font-weight: 700;
+    line-height: 150%;
+    background-color: var(--grey-700);
+    margin-top: 16px;
+    border-radius: 8px;
+    height: 45px;
+}
+
+.links a:hover,
+a:focus {
+    cursor: pointer;
+    background-color: var(--green);
+    color: black;
+}
+
+footer {
+    position: fixed;
+    bottom: 1rem;
+    width: 100%;
+}
+
+.attribution {
+    font-size: 0.6875rem;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+
+/********************* Responsive ***********************/
+
+/* Desktop (min-width: 992px) */
+/* Tablet (min-width: 768px) */
+/* This design : Desktop and Tablet dimensions same */
+
+@media (min-width: 768px) {
+
+    .profile-card {
+            font-size: 14px;
+            letter-spacing: 0;
+            min-width: 384px;
+            padding: 40px;
+        }
+    
+}
